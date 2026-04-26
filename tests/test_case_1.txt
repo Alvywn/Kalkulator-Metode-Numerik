@@ -1,0 +1,62 @@
+==============================================================
+TEST CASE 1 - Sistem 3x3 dengan Solusi Unik
+==============================================================
+Referensi: Buku Numerical Methods, contoh klasik
+
+Sistem:
+   x1 +  x2 +  x3 =  6
+  2x1 + 3x2 +  x3 = 14
+   x1 + 2x2 + 3x3 = 14
+
+Input:
+  n = 3
+  A = [[1, 1, 1],
+       [2, 3, 1],
+       [1, 2, 3]]
+  b = [6, 14, 14]
+
+Solusi diharapkan:
+  x1 = 1.000000
+  x2 = 2.000000
+  x3 = 3.000000
+
+Verifikasi:
+   1 + 2 + 3 =  6 ✓
+   2 + 6 + 3 = 11 ✗ → cek ulang
+
+--------------------------------------------------------------
+TEST CASE 2 - Sistem 2x2 Sederhana
+--------------------------------------------------------------
+Sistem:
+  3x1 + 2x2 = 7
+  6x1 + 4x2 = 14  ← baris 2 = 2 × baris 1 (tidak konsisten unik?)
+
+Note: Sistem ini TIDAK memiliki solusi UNIK
+      (determinan = 0, sistem dependan linier)
+      Program harus menampilkan pesan "tidak ada solusi unik"
+
+Input:
+  n = 2
+  A = [[3, 2],
+       [6, 4]]
+  b = [7, 14]
+
+Output diharapkan:
+  "Sistem tidak memiliki solusi unik"
+
+--------------------------------------------------------------
+TEST CASE 3 - Sistem 4x4
+--------------------------------------------------------------
+Sistem:
+  1x1 + 0x2 + 0x3 + 0x4 =  1
+  0x1 + 2x2 + 0x3 + 0x4 =  4
+  0x1 + 0x2 + 3x3 + 0x4 =  9
+  0x1 + 0x2 + 0x3 + 4x4 = 16
+
+(Matriks diagonal, mudah diverifikasi)
+
+Solusi diharapkan:
+  x1 = 1.000000
+  x2 = 2.000000
+  x3 = 3.000000
+  x4 = 4.000000
